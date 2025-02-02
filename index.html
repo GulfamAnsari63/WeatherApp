@@ -7,12 +7,13 @@
     <title>Weather Application</title>
 </head>
 <body>
+    <label class="switch">
+        <input type="checkbox" class="chk" id="modeToggle">
+        <span class="slider"></span>
+    </label>
     <div class="card">
-        <!-- <div class="search">
-            <input type="text" placeholder="Enter the city name" spellcheck="false">
-            <button><img src="./images/search.png"></button>
-        </div> -->
-        <!-- From Uiverse.io by OnlyCodeChannel --> 
+        
+        
 <div class="searchBox">
 
     <input class="searchInput" type="text" name="" placeholder="Search something">
@@ -138,6 +139,10 @@ searchBox.addEventListener("keypress", (event) => {
         checkWeather(searchBox.value);
     }
 });
+const toggleSwitch = document.getElementById("modeToggle");
+        toggleSwitch.addEventListener("change", () => {
+            document.body.classList.toggle("dark-mode");
+        });
 
     </script>
 </body>
